@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bug Splat Game</title>
+  </head>
+  <style>
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image:url('data:image/jpeg;base64,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');
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline;
+    }
+    img{
+        border-radius: 50%;
+        border: 5px solid green;
+    }
+    #comments{
+        text-align: center;
+        font-size: x-large;
+        border: 4px solid black;
+    }
+  </style>
+  <script>
+    var bugsLeft = 15;
+    function initialize(){
+        var bugsLeft = 15;
+    }
+    var defiance = [
+      "You'll never catch us!", 
+      "We're too fast for you!", 
+      "You'll never get us all!",
+      "You can't handle the bug power!",
+      "We're the ultimate bug warriors!",
+      "Mercy? We don't need your mercy!",
+      "You're not getting away with this!",
+      "We'll come back for you!",
+      "This is the end for you",
+      "You think we'll let you go easily?",
+      "Check under your bed tonight",
+      "We will eat all of your food"
+    ];
+
+    var mercy = [
+        "Please spare us!",
+        "Mercy! Mercy!",
+        "When will this horror end!",
+        "Is there no salvation in these dark times!",
+        "Oh god, please stay away from us!",
+        "We have to escape!",
+        "Please do not come any closer",
+        "We will bow to you please stay away"
+    ]
+
+    function splatBug(bug) {
+      if (bug.src.endsWith("splat.png")) {
+        return;
+      }
+      bug.src = "splat.png";
+      bugsLeft--;
+      if (bugsLeft <= 0) {
+        document.getElementById("comments").innerHTML = "You've splatted us all.";
+      } else {
+        var comment;
+        if (bugsLeft < 8) {
+          comment = mercy[Math.floor(Math.random() * mercy.length - 1) + 1];
+        } else {
+          comment = defiance[Math.floor(Math.random() * defiance.length - 1) + 1];
+        }
+        document.getElementById("comments").innerHTML = comment;
+      }
+    }
+  </script>
+  <body onload="initialize();">
+    <h1>BUG SPLAT GAME</h1>
+    <div id="bug-container">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+      <img src="bug.jpg" class="bug" onclick="splatBug(this)" width="200">
+    </div>
+    <div id="comments">
+
+    </div>
+    
+  </body>
+</html>
